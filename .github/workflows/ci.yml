@@ -75,7 +75,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd googleMapScapper
+          cd googleMapScapper/googleMapScapper  
           ./gradlew build
 
       - name: Generate and submit dependency graph
