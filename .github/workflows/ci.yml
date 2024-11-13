@@ -62,7 +62,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x googleMapScrapper/gradlew
+        run: chmod +x googleMapScapper/gradlew
 
       - name: Verify Gradle files exist
         run: |
