@@ -27,7 +27,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd dataCreater
+          cd googleMapScapper
           ./gradlew build
 
   dependency-submission:
