@@ -66,11 +66,11 @@ jobs:
 
       - name: Verify Gradle files exist
         run: |
-          if [ ! -f "build.gradle" ]; then
+          if [ ! -f "/build.gradle" ]; then
             echo "Error: build.gradle file is missing."
             exit 1
           fi
-          if [ ! -f "settings.gradle" ]; then
+          if [ ! -f "/settings.gradle" ]; then
             echo "Error: settings.gradle file is missing."
             exit 1
           fi
