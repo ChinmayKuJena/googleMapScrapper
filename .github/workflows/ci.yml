@@ -35,8 +35,6 @@
 #           gradle-version: '8.8'  
 
 
-
-
 name: CI
 
 on:
@@ -62,22 +60,22 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x googleMapScapper/gradlew
+        run: chmod +x ./googleMapScapper/gradlew  # Correct path here
 
       - name: Verify Gradle files exist
         run: |
-          if [ ! -f "/build.gradle" ]; then
+          if [ ! -f "googleMapScapper/build.gradle" ]; then
             echo "Error: build.gradle file is missing."
             exit 1
           fi
-          if [ ! -f "/settings.gradle" ]; then
+          if [ ! -f "googleMapScapper/settings.gradle" ]; then
             echo "Error: settings.gradle file is missing."
             exit 1
           fi
 
       - name: Build with Gradle
         run: |
-          cd googleMapScrapper
+          cd googleMapScapper
           ./gradlew build
 
       - name: Generate and submit dependency graph
