@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x dataCreater/gradlew
+        run: chmod +x googleMapScapper/gradlew
 
       - name: Build with Gradle
         run: |
