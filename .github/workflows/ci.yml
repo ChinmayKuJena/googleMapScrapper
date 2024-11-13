@@ -23,10 +23,11 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x dataCreater/gradlew
+        run: chmod +x googleMapScapper/gradlew
 
       - name: Build with Gradle
         run: |
-          cd dataCreater
+          cd googleMapScapper
           ./gradlew build
-
+      - name: Generate and submit dependency graph
+        uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582    
